@@ -1,0 +1,95 @@
+.home {
+  width: 100%;
+}
+
+.home .tabs {
+  display: flex;
+  width: 100%;
+  height: 30px;
+  margin-bottom: 60px;
+}
+
+.home .tabs .tab {
+  position: relative;
+  flex: 1;
+  padding: 0 10px;
+}
+
+.home .tabs .tab:hover {
+  cursor: pointer;
+}
+
+.home .tabs .tab.active:after {
+  content: "";
+  position: absolute;
+  margin: 0 auto;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 10px;
+  height: 2px;
+  border-radius: 10px;
+  background-color: var(--gallery);
+}
+
+.home .tabs .tab .title {
+  font-size: var(--secondary-font-size);
+  color: var(--silver-chalice);
+  text-align: center;
+}
+
+.home .tabs .tab:hover .title,
+.home .tabs .tab.active .title {
+  color: var(--gallery);
+}
+
+.home .next-launch {
+  position: relative;
+  margin-bottom: 60px;
+  padding: 20px 20px 20px 0;
+}
+
+.home .next-launch-title {
+  margin-bottom: 20px;
+  padding-left: 20px;
+  font-size: var(--secondary-font-size);
+  color: var(--silver-chalice);
+  word-break: break-word;
+}
+
+.home .next-launch-background-layer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--red);
+  border-radius: 5px;
+  z-index: -1;
+}
+
+.home .launches {
+  position: relative;
+  width: 100%;
+}
+
+.home .launches .time-line-bar {
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 120px);
+  left: 9px;
+  top: 60px;
+  background-color: var(--silver-chalice);
+  z-index: -1;
+}
+
+.home .launches .launch-summary:not(:last-of-type) {
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+  .home .launches .time-line-bar {
+    height: calc(100% - 80px);
+    top: 40px;
+  }
+}

@@ -1,0 +1,11 @@
+.launch-patch-not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  font-size: var(--small-font-size);
+  color: var(--silver-chalice);
+  text-align: center;
+  border-radius: 100%;
+  border: var(--silver-chalice) solid 2px;
+}

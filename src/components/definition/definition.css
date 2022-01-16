@@ -1,0 +1,23 @@
+.definition .title {
+  margin-bottom: 10px;
+  line-height: 30px;
+  font-weight: 700;
+  font-size: var(--secondary-font-size);
+  color: var(--gallery);
+  word-break: break-word;
+}
+
+.definition .value {
+  line-height: 30px;
+  font-size: var(--secondary-font-size);
+  color: var(--silver-chalice);
+  word-break: break-word;
+}
+
+.definition .value a {
+  color: inherit;
+}
+
+.definition .value a:hover {
+  color: var(--gallery);
+}

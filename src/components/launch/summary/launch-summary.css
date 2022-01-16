@@ -1,0 +1,95 @@
+.launch-summary {
+  display: grid;
+  grid-template-columns: 20px 40px 120px 1fr;
+  grid-gap: 20px;
+  width: 100%;
+  height: 120px;
+}
+
+.launch-summary .cell {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.launch-summary .main-info-cell {
+  min-width: 0;
+}
+
+.launch-summary .node {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+}
+
+.launch-summary.failed .node {
+  background-color: var(--well-read);
+}
+
+.launch-summary.successful .node {
+  background-color: var(--goblin);
+}
+
+.launch-summary.upcoming .node {
+  background-color: var(--cornflower-blue);
+}
+
+.launch-summary .month {
+  margin-bottom: 10px;
+  color: var(--silver-chalice);
+}
+
+.launch-summary .year {
+  color: var(--gallery);
+}
+
+.launch-summary .launch-patch-image {
+  width: 120px;
+  height: 120px;
+}
+
+.launch-summary .name {
+  margin-bottom: 10px;
+  font-size: var(--main-font-size);
+  color: var(--gallery);
+}
+
+.launch-summary .date {
+  margin-bottom: 10px;
+  font-size: var(--secondary-font-size);
+  color: var(--silver-chalice);
+}
+
+.launch-summary .status {
+  font-size: var(--secondary-font-size);
+}
+
+.launch-summary.failed .status {
+  color: var(--well-read);
+}
+
+.launch-summary.successful .status {
+  color: var(--goblin);
+}
+
+.launch-summary.upcoming .status {
+  color: var(--cornflower-blue);
+}
+
+@media screen and (max-width: 768px) {
+  .launch-summary {
+    grid-template-columns: 20px 80px 1fr;
+    height: 80px;
+  }
+
+  .launch-summary .launch-patch-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .launch-summary .status,
+  .launch-summary .date-cell {
+    display: none;
+  }
+}
